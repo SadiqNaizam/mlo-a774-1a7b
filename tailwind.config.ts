@@ -64,10 +64,15 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: 'var(--radius)', // Will be 0.375rem (6px)
+				md: 'calc(var(--radius) - 2px)', // Approx 4px
+				sm: 'calc(var(--radius) - 4px)'  // Approx 2px
 			},
+			fontFamily: {
+                // Make CSS font variables available as Tailwind utility classes e.g. `font-body`, `font-heading`
+                body: ['var(--font-body)'],
+                heading: ['var(--font-heading)'],
+            },
 			keyframes: {
 				'accordion-down': {
 					from: {
